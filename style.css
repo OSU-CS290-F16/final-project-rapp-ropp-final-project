@@ -1,6 +1,6 @@
-body { 
+body {
 	position: relative;
-	margin: 0; 
+	margin: 0;
 }
 header {
 	position: absolute;
@@ -32,8 +32,22 @@ header h1 a:hover {
 	overflow: scroll;
 }
 main {
-	
+    position: absolute;
+    margin-left:30%;
+    margin-right:100%;
+    margin-top: 16%;
+    margin-bottom: 50%;
 }
+.board{
+
+    display:inline;
+    margin-right:500px;
+    margin-bottom:500px;
+    padding-right:400px;
+    padding-left:200px;
+    padding-bottom:400px;
+}
+
 footer {
-	
+
 }
