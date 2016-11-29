@@ -1,1 +1,4 @@
-"# final-project-rapp-ropp-final-project" 
+Ryan Rapp
+Jonathan Ropp
+
+CS 290 Final Project - Tic-Tac-Toe
