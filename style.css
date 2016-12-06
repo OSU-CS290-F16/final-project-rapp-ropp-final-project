@@ -2,49 +2,89 @@ body {
 	position: relative;
 	margin: 0; 
 }
+
 header {
-	position: absolute;
-	background-color: blue;
-	margin-left: 30%;
-	margin-right: 0%;
+	position:relative;
+ 	height: 100px;
+	margin-left: 200px;
+	width:100%;
+	min-width: 500px;
+	display: inline-block;
+	top: 0;
+	right:0;
+	background-color: blue; 
 }
+
 header h1{
+
+}
+
+header h1 a {
+
+}
+
+header h1 a:hover {
+
+}
+
+nav{
+
+}
+
+.navbar-item {
+  display: inline;
+}
+
+.navbar-list {
+
+}
+
+.sidebar {
+    top: 0;
+	bottom: 0;	
+	position: fixed;
+	width: 200px; 
+    display: inline-block; 
+    margin-left: 0;
+    background-color: red; 
+    overflow: scroll;
+    padding-top: 10px;	
+} 
+
+.sidebar-title{
 	color: white;
 	text-decoration: none;
 	font-family: "sans-serif";
 	font-size: 50px;
 	font-weight: 200;
 }
-header h1 a {
-	color: inherit;
+
+.save-game{
+	padding-top: 5px;
 }
-header h1 a:hover {
-	text-decoration: none;
-}
-.sidebar {
-    height: 100%; /* 100% Full-height */
-    width: 10; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0;
-    left: 0;
-    background-color: red; /* Black*/
-    overflow-x: scroll; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    */
-/* 	position: absolute;
-	margin-right: 70%;
-	margin-left: 0%;
-	margin-bottom: 100%;
-	margin-top: 0%;
-	background-color: red;
-	padding-top:1%;
-	padding-bottom: 99%;
-	overflow: scroll;*/
-} 
+
 main {
-	
+	position: inline-block;
+	display: flex;
+	margin-top: 20%;
+	margin-left: 30%;
+	margin-right: 0%;
+	margin-bottom: 10%;
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-left:20px;
+	padding-right:30px;
 }
+
+section{
+    background-color: #fffe6e;
+    position: relative;
+    width: 10%;
+    height: 10%;
+    font-size: 50px;
+
+}
+
 footer {
 	
 }
