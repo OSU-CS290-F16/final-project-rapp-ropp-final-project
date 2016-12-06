@@ -1,11 +1,12 @@
-body {
+body { 
 	position: relative;
-	margin: 0;
+	margin: 0; 
 }
 header {
 	position: absolute;
 	background-color: blue;
 	margin-left: 30%;
+	margin-right: 0%;
 }
 header h1{
 	color: white;
@@ -21,7 +22,17 @@ header h1 a:hover {
 	text-decoration: none;
 }
 .sidebar {
-	position: absolute;
+    height: 100%; /* 100% Full-height */
+    width: 10; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: red; /* Black*/
+    overflow-x: scroll; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    */
+/* 	position: absolute;
 	margin-right: 70%;
 	margin-left: 0%;
 	margin-bottom: 100%;
@@ -29,25 +40,11 @@ header h1 a:hover {
 	background-color: red;
 	padding-top:1%;
 	padding-bottom: 99%;
-	overflow: scroll;
-}
+	overflow: scroll;*/
+} 
 main {
-    position: absolute;
-    margin-left:30%;
-    margin-right:100%;
-    margin-top: 16%;
-    margin-bottom: 50%;
+	
 }
-.board{
-
-    display:inline;
-    margin-right:500px;
-    margin-bottom:500px;
-    padding-right:400px;
-    padding-left:200px;
-    padding-bottom:400px;
-}
-
 footer {
-
+	
 }
