@@ -15,14 +15,10 @@ app.get('/',function(req,res){
   res.render('index-page');
 });
 
-
-
-
-/* app.use(function(req, res, next){
-    res.status(404).render('404');
+app.get('*', function (req, res, next){
+    res.status(404).render('404-page');
 }); 
 
-For 404 page when done.*/
 
 app.listen(port, function () {
   console.log("== Listening on port", port);

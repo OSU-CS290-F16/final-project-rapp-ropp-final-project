@@ -97,3 +97,14 @@ footer {
 	font-size: 10px;
 	font-family: comic-sans;
 }
+
+.x404 {
+	position: relative;
+	height: auto;
+	width: auto;
+	top: 80px; /*for header*/
+	left: 25%; /*for sidebar*/
+	padding-left: 50px;
+	padding-top: 20px;
+		
+}
