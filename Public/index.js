@@ -87,6 +87,41 @@ function clickSpace(event){
 
 }
 
+
+checkWin = function () { // CHECKS IF X WON
+    if (("one" == "four" && "one" == "seven" && ("one" == "x")) || //first column
+    ("two" == "five" && "two" == "eight" && ("two" == "x")) || //second column
+    ("three" == "six" && "three" == "nine" && ("three" == "x")) || //third column
+    ("one" == "two" && "one" == "three" && ("one" == "x")) || //first row
+    ("four" == "five" && "four" == "six" && ("four" == "x")) || //second row
+    ("seven" == "eight" && "seven" == "nine" && ("seven" == "x")) || //third row
+    ("one" == "five" && "one" == "nine" && ("one" == "x")) || //diagonal 1
+    ("seven" == "five" && "seven" == "three" && ("seven" == "x")) //diagonal 2
+    ) {
+        xWin = true;
+        winAlert();
+
+    } else { // CHECKS IF O WON
+        if (("one" == "four" && "one" == "seven" && ("one" == "o")) || //first column
+        ("two" == "five" && "two" == "eight" && ("two" == "o")) || //second column
+        ("three" == "six" && "three" == "nine" && ("three" == "o")) || //third column
+        ("one" == "two" && "one" == "three" && ("one" == "o")) || //first row
+        ("four" == "five" && "four" == "six" && ("four" == "o")) || //second row
+        ("seven" == "eight" && "seven" == "nine" && ("seven" == "o")) || //third row
+        ("one" == "five" && "one" == "nine" && ("one" == "o")) || //diagonal 1
+        ("seven" == "five" && "seven" == "three" && ("seven" == "o")) //diagonal 2
+        ) {
+            oWin = true;
+            winAlert();
+
+        } else { 
+            if ((("one" == "x") || ("one" == "o")) && (("two" == "x") || ("two" == "o")) && (("three" == "x") || ("three" == "o")) && (("four" == "x") || ("four" == "o")) && (("five" == "x") || ("five" == "o")) && (("six" == "x") || ("six" == "o")) && (("seven" == "x") || ("seven" == "o")) && (("eight" == "x") || ("eight" == "o")) && (("nine" == "x") || ("nine" == "o"))) {
+                alert("It's a tie!");
+            }
+        }
+    }
+};
+
 function changeHTML(id,value){
 
     document.getElementById(id).innerHTML = value;
