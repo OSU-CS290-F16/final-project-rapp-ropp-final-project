@@ -4,18 +4,24 @@ body {
 }
 
 header { /*Main header*/
+	min-width: 350px;
 	position:fixed;
- 	height: 100px;
-	margin-left: 200px; /*for sidebar*/
+ 	height: 80px;
+	padding-left: 25%; /*for sidebar*/
+	padding-right: 10%;
 	display: inline-block;
 	top: 0;
 	right:0;
 	left: 0;
-	background-color: blue; 
+	background-color: #74d0f7; 
+	box-shadow: 0px 3px 5px;
 }
 
 header h1{ /*Title*/
-
+	margin: 10px 0 0 0;
+	text-align: center;
+	font-size: 50px;
+	font-family: comic-sans;
 }
 
 nav{ /*container for navbar*/
@@ -30,13 +36,14 @@ nav{ /*container for navbar*/
 }
 
 .sidebar { /*Entire sidebar div*/
+	z-index: 1;
     top: 0;
 	bottom: 0;	
 	position: fixed;
-	width: 200px; 
+	width: 25%; 
     display: inline-block; 
     margin-left: 0;
-    background-color: red; 
+    background-color: #ff9a3d; 
     overflow: scroll;
     padding-top: 10px;	
 } 
@@ -49,37 +56,44 @@ nav{ /*container for navbar*/
 	font-weight: 200;
 }
 
-.save-game{ /*divs below thesidebar title*/
+.save-game{ /*divs below the sidebar title*/
 	padding-top: 5px;
 }
 
-.board-title{ /*title div above the board, below the header*/
-	position: absolute;
-	left: 200px; /*for sidebar*/
-	top: 100px; /*for header*/
-	right: 0;
-	padding-top:20px;
-	padding-bottom:20px;
-	padding-left:20px;
-	padding-right:30px;
-	background-color: grey;
-}
 .board{ /*The whole board. Maybe have 3 divs within this to help position?*/
+	min-width: 350px;
 	position: absolute;
-	top: 220px; /*for header + board-title + extra room*/
-	left: 210px; /*for sidebar + extra room*/
-	/*Probably change the extra room to padding? */
+	height: 500px;
+	top: 100px; /*for header + board-title + extra room*/
+    width: 75%;
+	left: 25%;/*for sidebar */
+	padding: 0 0 0 1.5%;
 }
-section{ /*Each box on the board*/
-	margin-right: -4px; /*account for border*/
+.box{ /*Each box on the board*/
+	min-width: 50px;
+	height: 20%;
+	width: 30%;
+	text-align: center;
+	margin: 0px -4px 0px 0px;
 	border: solid;
-	border-width: 4px;
-	padding: 10px 10px 10px 10px;
+	border-width: 1px;
+	padding: 1% 1% 1% 1%;
     background-color: green;
     display: inline-block;
-    font-size: 100px;
+    font-size: 75px;
 }
 
 footer {
-	
+	position:fixed;
+ 	height: 20px;
+	padding-left: 25%; /*for sidebar*/
+	padding-top: 5px;
+	display: inline-block;
+	bottom: 0;
+	right:0;
+	left: 0;
+	background-color: #74d0f7; 
+	text-align: right;
+	font-size: 10px;
+	font-family: comic-sans;
 }
