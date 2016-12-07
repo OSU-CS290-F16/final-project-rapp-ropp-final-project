@@ -3,43 +3,33 @@ body {
 	margin: 0; 
 }
 
-header {
-	position:relative;
+header { /*Main header*/
+	position:fixed;
  	height: 100px;
-	margin-left: 200px;
-	width:100%;
-	min-width: 500px;
+	margin-left: 200px; /*for sidebar*/
 	display: inline-block;
 	top: 0;
 	right:0;
+	left: 0;
 	background-color: blue; 
 }
 
-header h1{
+header h1{ /*Title*/
 
 }
 
-header h1 a {
+nav{ /*container for navbar*/
+
+}
+.navbar-list { /*the <ul> tag for the navbar*/
 
 }
 
-header h1 a:hover {
-
-}
-
-nav{
-
-}
-
-.navbar-item {
+.navbar-item { /*Each <li> tag within the list*/
   display: inline;
 }
 
-.navbar-list {
-
-}
-
-.sidebar {
+.sidebar { /*Entire sidebar div*/
     top: 0;
 	bottom: 0;	
 	position: fixed;
@@ -51,7 +41,7 @@ nav{
     padding-top: 10px;	
 } 
 
-.sidebar-title{
+.sidebar-title{ /*sidebar div with title.*/
 	color: white;
 	text-decoration: none;
 	font-family: "sans-serif";
@@ -59,30 +49,35 @@ nav{
 	font-weight: 200;
 }
 
-.save-game{
+.save-game{ /*divs below thesidebar title*/
 	padding-top: 5px;
 }
 
-main {
-	position: inline-block;
-	display: flex;
-	margin-top: 20%;
-	margin-left: 30%;
-	margin-right: 0%;
-	margin-bottom: 10%;
+.board-title{ /*title div above the board, below the header*/
+	position: absolute;
+	left: 200px; /*for sidebar*/
+	top: 100px; /*for header*/
+	right: 0;
 	padding-top:20px;
 	padding-bottom:20px;
 	padding-left:20px;
 	padding-right:30px;
+	background-color: grey;
 }
-
-section{
-    background-color: #fffe6e;
-    position: relative;
-    width: 10%;
-    height: 10%;
-    font-size: 50px;
-
+.board{ /*The whole board. Maybe have 3 divs within this to help position?*/
+	position: absolute;
+	top: 220px; /*for header + board-title + extra room*/
+	left: 210px; /*for sidebar + extra room*/
+	/*Probably change the extra room to padding? */
+}
+section{ /*Each box on the board*/
+	margin-right: -4px; /*account for border*/
+	border: solid;
+	border-width: 4px;
+	padding: 10px 10px 10px 10px;
+    background-color: green;
+    display: inline-block;
+    font-size: 100px;
 }
 
 footer {
