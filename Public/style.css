@@ -4,6 +4,7 @@ body {
 }
 
 header { /*Main header*/
+
 	min-width: 350px;
 	position:fixed;
  	height: 80px;
@@ -16,12 +17,15 @@ header { /*Main header*/
 	background-color: #74d0f7; 
 	box-shadow: 0px 3px 5px;
 }
-
+header a{
+	text-decoration: none;
+	font-family: "Comic Sans MS";
+	color: #000e69;
+}
 header h1{ /*Title*/
 	margin: 10px 0 0 0;
 	text-align: center;
-	font-size: 50px;
-	font-family: comic-sans;
+	font-size: 50px;	
 }
 
 nav{ /*container for navbar*/
@@ -36,6 +40,7 @@ nav{ /*container for navbar*/
 }
 
 .sidebar { /*Entire sidebar div*/
+
 	z-index: 1;
     top: 0;
 	bottom: 0;	
@@ -51,8 +56,8 @@ nav{ /*container for navbar*/
 .sidebar-title{ /*sidebar div with title.*/
 	color: white;
 	text-decoration: none;
-	font-family: "sans-serif";
-	font-size: 50px;
+	font-family: sans-serif;
+	font-size: 45px;
 	font-weight: 200;
 }
 
@@ -60,17 +65,20 @@ nav{ /*container for navbar*/
 	padding-top: 5px;
 }
 
-.board{ /*The whole board. Maybe have 3 divs within this to help position?*/
+.board{ /*The whole board.*/
 	min-width: 350px;
 	position: absolute;
-	height: 500px;
+	bottom: 0;
 	top: 100px; /*for header + board-title + extra room*/
-    width: 75%;
-	left: 25%;/*for sidebar */
-	padding: 0 0 0 1.5%;
+    width: 73.5%;
+	left: 26.5%;/*for sidebar */
+	right: 0;
+	padding: 0 0 0 0;
 }
 .box{ /*Each box on the board*/
 	min-width: 50px;
+	min-height: 50px;
+	top: 0;
 	height: 20%;
 	width: 30%;
 	text-align: center;
@@ -82,11 +90,31 @@ nav{ /*container for navbar*/
     display: inline-block;
     font-size: 75px;
 }
+.box:hover {
+	cursor: pointer;
+	background-color: 6ad06a;
+}
+
+.score{
+	position: absolute;
+	bottom: 25px;
+	margin-left:25%;
+	right: 0;
+	left: 0;
+	text-align: center;
+	background-color: #ff2c2c;
+	height: 50px;
+	font-size: 20px;
+	padding-bottom: 10px;
+	border-style: solid;
+	border-width: 2px;
+	
+}
 
 footer {
-	position:fixed;
+	position:absolute;
  	height: 20px;
-	padding-left: 25%; /*for sidebar*/
+	margin-left: 25%; /*for sidebar*/
 	padding-top: 5px;
 	display: inline-block;
 	bottom: 0;
@@ -96,6 +124,8 @@ footer {
 	text-align: right;
 	font-size: 10px;
 	font-family: comic-sans;
+	border-style: solid;
+	border-width: 2px;
 }
 
 .x404 {
