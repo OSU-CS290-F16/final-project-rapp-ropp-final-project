@@ -153,5 +153,3 @@ function changeHTML(id,value){
   for (var i = 0; i < box.length; i++) {
 	box[i].addEventListener('click', clickSpace)
   }
-
-
