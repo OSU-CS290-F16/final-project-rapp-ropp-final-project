@@ -80,7 +80,7 @@ nav{ /*container for navbar*/
 	position: absolute;
 	bottom: 0;
 	top: 75px; /*for header */
-    width: 73.5%;
+    width: 67.5%;
 	left: 32.5%;/*for sidebar */
 	right: 0;
 	padding: 0 0 0 0;
@@ -151,7 +151,7 @@ footer {
 footer p{
 	float: right;
 	font-size: 10px;
-	margin: 0 0 0 0;
+	margin: 0 5px 0 0;
 }
 
 .x404 {
@@ -161,5 +161,4 @@ footer p{
 	padding-top: 20px;
 	text-align: center;
 	font-size: 100px;
-}	
 }
