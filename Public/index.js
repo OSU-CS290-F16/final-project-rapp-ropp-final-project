@@ -134,6 +134,30 @@ checkWin = function () { // CHECKS IF X WON
     }
 };
 
+function newGame(event){
+    player = 'x';
+    otherPlayer = 'o';
+    one = ' ';
+    two = ' ';
+    three = ' ';
+    four = ' ';
+    five = ' ';
+    six = ' ';
+    seven = ' ';
+    eight = ' ';
+    nine = ' ';
+    changeHTML('one' ,one);
+    changeHTML('two' ,two);
+    changeHTML('three' ,three);
+    changeHTML('four' ,four);
+    changeHTML('five' ,five);
+    changeHTML('six' ,six);
+    changeHTML('seven' ,seven);
+    changeHTML('eight' ,eight);
+    changeHTML('nine' ,nine);
+    changeTurn(player);
+}
+
 function winAlert(){
     if(xWin){
         alert("X Wins!!!!!!!");
@@ -153,3 +177,9 @@ function changeHTML(id,value){
   for (var i = 0; i < box.length; i++) {
 	box[i].addEventListener('click', clickSpace)
   }
+
+  var daButton = document.getElementsByClassName('new-game');
+  for (var i =0; i < daButton.length; i++) {
+    daButton[i].addEventListener('click', newGame)
+  }
+
