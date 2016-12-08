@@ -1,8 +1,7 @@
 body { 
 	position: relative;
 	margin: 0;
-	    background: linear-gradient(green, red); /* Standard syntax */
-
+	background: linear-gradient(green, red);
 }
 
 header { /*Main header*/
@@ -16,6 +15,8 @@ header { /*Main header*/
 	right:0;
 	left: 0;
 	box-shadow: 0px 3px 5px;
+	background-image: url("https://i.stack.imgur.com/p9mUO.jpg");
+	
 }
 header a{
 	text-decoration: none;
@@ -26,7 +27,9 @@ header h1{ /*Title*/
 	margin: 0 0 0 0;
 	padding: 10px 6% 0 4%;
 	text-align: center;
-	font-size: 50px;	
+	font-size: 50px;
+	color: white;
+	text-shadow: 1px 2px 2px orange;
 }
 
 nav{ /*container for navbar*/
@@ -103,21 +106,15 @@ nav{ /*container for navbar*/
 .score{
 	position: absolute;
 	bottom: 0;
-	left: 25%;
+	margin-left: 25%;
+	left: 0;
 	right: 0;
-	min-width: 160px;
+	min-width: 400px;
 	margin-bottom: 25px;
 	font-size: 40px;
 	text-align: center;
 	vertical-align: middle;
 
-	
-/* 	
-	text-align: center;
-	background-color: red;
-	height: 50px;
-	font-size: 20px;
-	padding: 0 0 0 0;*/
 }
 .score h3{
 	margin: 0 0 10px 0;
