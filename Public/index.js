@@ -98,28 +98,28 @@ function clickSpace(event){
 
 
 checkWin = function () { // CHECKS IF X WON
-    if ((one == four && one == seven && (one == "x")) || //first column
-    (two == five && two == eight && (two == "x")) || //second column
-    (three == six && three == nine && (three == "x")) || //third column
-    (one == two && one == three && (one == "x")) || //first row
-    (four == five && four == six && (four == "x")) || //second row
-    (seven == eight && seven == nine && (seven == "x")) || //third row
-    (one == five && one == nine && (one == "x")) || //diagonal 1
-    (seven == five && seven == three && (seven == "x")) //diagonal 2
+    if ((one == four && one == seven && (one == "X")) || //first column
+    (two == five && two == eight && (two == "X")) || //second column
+    (three == six && three == nine && (three == "X")) || //third column
+    (one == two && one == three && (one == "X")) || //first row
+    (four == five && four == six && (four == "X")) || //second row
+    (seven == eight && seven == nine && (seven == "X")) || //third row
+    (one == five && one == nine && (one == "X")) || //diagonal 1
+    (seven == five && seven == three && (seven == "X")) //diagonal 2
     ) {
         xWin = true;
         oWin = false;
         winAlert();
 
     } else { // CHECKS IF O WON
-        if ((one == four && one == seven && (one == "o")) || //first column
-        (two == five && two == eight && (two == "o")) || //second column
-        (three == six && three == nine && (three == "o")) || //third column
-        (one == two && one == three && (one == "o")) || //first row
-        (four == five && four == six && (four == "o")) || //second row
-        (seven == eight && seven == nine && (seven == "o")) || //third row
-        (one == five && one == nine && (one == "o")) || //diagonal 1
-        (seven == five && seven == three && (seven == "o")) //diagonal 2
+        if ((one == four && one == seven && (one == "O")) || //first column
+        (two == five && two == eight && (two == "O")) || //second column
+        (three == six && three == nine && (three == "O")) || //third column
+        (one == two && one == three && (one == "O")) || //first row
+        (four == five && four == six && (four == "O")) || //second row
+        (seven == eight && seven == nine && (seven == "O")) || //third row
+        (one == five && one == nine && (one == "O")) || //diagonal 1
+        (seven == five && seven == three && (seven == "O")) //diagonal 2
         ) {
             oWin = true;
             xWin = false;
