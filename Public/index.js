@@ -1,3 +1,5 @@
+
+
 var player = 'X';
 var otherPlayer = 'O';
 var one = ' ';
@@ -129,6 +131,7 @@ checkWin = function () { // CHECKS IF X WON
             //if ((("one" == "x") || ("one" == "o")) && (("two" == "x") || ("two" == "o")) && (("three" == "x") || ("three" == "o")) && (("four" == "x") || ("four" == "o")) && (("five" == "x") || ("five" == "o")) && (("six" == "x") || ("six" == "o")) && (("seven" == "x") || ("seven" == "o")) && (("eight" == "x") || ("eight" == "o")) && (("nine" == "x") || ("nine" == "o"))) {
             if(one != " " && two != " " && three != " " && four != " " && five != " " && six != " " && seven != " " && eight != " " && nine != " "){
                 alert("It's a tie!");
+                createNewResult('tie');
             }
         }
     }
@@ -161,8 +164,10 @@ function newGame(event){
 function winAlert(){
     if(xWin){
         alert("X Wins!!!!!!!");
+        createNewResult('x');
     }else if(oWin){
         alert("O Wins!!!!!!!")
+        createNewResult('o');
     }
 }
 function changeHTML(id,value){
@@ -170,7 +175,27 @@ function changeHTML(id,value){
     document.getElementById(id).innerHTML = value;
 }
 
+function createNewResult(result){
+    var mark;
 
+  if(result=='x'){
+    mark="X Won!";
+  }else if(result=='o'){
+    mark="O Won!";
+  }else if(result=='tie'){
+    mark="You Tied.";
+  }
+
+
+  var winner = document.getElementById('winner-list');
+  var node=document.createElement('li');
+  var textnode=document.createTextNode(mark);
+  node.appendChild(textnode);
+  winner.appendChild(node);
+
+
+
+}
 
   // Delegate an event listener to <main> to handle clicks on dismiss buttons.
   var box = document.getElementsByClassName('box');
