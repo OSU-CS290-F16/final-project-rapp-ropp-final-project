@@ -1,5 +1,5 @@
-var player = 'x';
-var otherPlayer = 'o';
+var player = 'X';
+var otherPlayer = 'O';
 var one = ' ';
 var two = ' ';
 var three = ' ';
