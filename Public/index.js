@@ -135,8 +135,8 @@ checkWin = function () { // CHECKS IF X WON
 };
 
 function newGame(event){
-    player = 'x';
-    otherPlayer = 'o';
+    player = 'X';
+    otherPlayer = 'O';
     one = ' ';
     two = ' ';
     three = ' ';
