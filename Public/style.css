@@ -71,7 +71,12 @@ nav{ /*container for navbar*/
 }
 
 .save-game{ /*divs below the sidebar title*/
-	padding-top: 5px;
+	padding-left: 15px;
+	
+}
+#winner-list {
+	font-size: 4vw;
+	font-family: Arial;
 }
 
 .board{ /*The whole board.*/
@@ -123,7 +128,7 @@ nav{ /*container for navbar*/
 .score h3{
 	margin: 0 0 10px 0;
 	padding: 0;
-	    font-size: 16px; 
+	font-size: 16px; 
 	font-size: 4vw;
 	
 }

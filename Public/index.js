@@ -1,5 +1,3 @@
-
-
 var player = 'X';
 var otherPlayer = 'O';
 var one = ' ';
@@ -11,6 +9,8 @@ var six = ' ';
 var seven = ' ';
 var eight = ' ';
 var nine = ' ';
+var xWin = null;
+var oWin = null;
 
 function changeTurn(player){
     var str = "It is "+player+"'s Turn";
@@ -19,6 +19,7 @@ function changeTurn(player){
 function clickSpace(event){
 
         var clickedElem = event.target;
+		if(xWin==null && oWin==null){
 
             var id=clickedElem.id;
             if(id=='one' && one == ' '){
@@ -94,8 +95,7 @@ function clickSpace(event){
                 changeTurn(player);
                 checkWin();
             }
-
-
+		}
 }
 
 
@@ -128,7 +128,6 @@ checkWin = function () { // CHECKS IF X WON
             winAlert();
 
         } else {
-            //if ((("one" == "x") || ("one" == "o")) && (("two" == "x") || ("two" == "o")) && (("three" == "x") || ("three" == "o")) && (("four" == "x") || ("four" == "o")) && (("five" == "x") || ("five" == "o")) && (("six" == "x") || ("six" == "o")) && (("seven" == "x") || ("seven" == "o")) && (("eight" == "x") || ("eight" == "o")) && (("nine" == "x") || ("nine" == "o"))) {
             if(one != " " && two != " " && three != " " && four != " " && five != " " && six != " " && seven != " " && eight != " " && nine != " "){
                 alert("It's a tie!");
                 createNewResult('tie');
@@ -159,6 +158,8 @@ function newGame(event){
     changeHTML('eight' ,eight);
     changeHTML('nine' ,nine);
     changeTurn(player);
+	oWin = null;
+	xWin = null;
 }
 
 function winAlert(){
@@ -176,35 +177,30 @@ function changeHTML(id,value){
 }
 
 function createNewResult(result){
-    var mark;
+	var mark;
 
-  if(result=='x'){
-    mark="X Won!";
-  }else if(result=='o'){
-    mark="O Won!";
-  }else if(result=='tie'){
-    mark="You Tied.";
-  }
+	if(result=='x'){
+		mark="X Won!";
+	}else if(result=='o'){
+		mark="O Won!";
+	}else if(result=='tie'){
+		mark="You Tied.";
+	}
 
-
-  var winner = document.getElementById('winner-list');
-  var node=document.createElement('li');
-  var textnode=document.createTextNode(mark);
-  node.appendChild(textnode);
-  winner.appendChild(node);
-
-
+	var winner = document.getElementById('winner-list');
+	var node=document.createElement('li');
+	var textnode=document.createTextNode(mark);
+	node.appendChild(textnode);
+	winner.appendChild(node);
 
 }
+var box = document.getElementsByClassName('box');
+	for (var i = 0; i < box.length; i++) {
+		box[i].addEventListener('click', clickSpace)
+	}
 
-  // Delegate an event listener to <main> to handle clicks on dismiss buttons.
-  var box = document.getElementsByClassName('box');
-  for (var i = 0; i < box.length; i++) {
-	box[i].addEventListener('click', clickSpace)
-  }
 
-  var daButton = document.getElementsByClassName('new-game');
-  for (var i =0; i < daButton.length; i++) {
-    daButton[i].addEventListener('click', newGame)
-  }
-
+var daButton = document.getElementsByClassName('new-game');
+	for (var i =0; i < daButton.length; i++) {
+		daButton[i].addEventListener('click', newGame)
+	}
