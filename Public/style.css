@@ -20,7 +20,7 @@ header { /*Main header*/
 	background-image: url("https://i.stack.imgur.com/p9mUO.jpg");
 	
 }
-header a{
+header a{ /*Clickable title*/
 	text-decoration: none;
 	font-family: "Comic Sans MS";
 	color: #000e69;
@@ -55,7 +55,7 @@ nav{ /*container for navbar*/
     display: inline-block; 
     margin-left: 0;
     background-color: #ff9a3d; 
-    overflow: scroll;	
+    overflow: auto;	
 } 
 
 .sidebar-title{ /*sidebar div with title.*/
@@ -74,8 +74,12 @@ nav{ /*container for navbar*/
 	padding-left: 15px;
 	
 }
-#winner-list {
+.data { /*winner list*/
 	font-size: 4vw;
+	font-family: Arial;
+}
+.date { /*Date below winner*/
+	font-size: 1vw;
 	font-family: Arial;
 }
 
@@ -107,12 +111,12 @@ nav{ /*container for navbar*/
     font-size: 16px; 
 	font-size: 5.5vw;
 }
-.box:hover {
+.box:hover { /*hover over space on board*/
 	cursor: pointer;
 	background-color: 6ad06a;
 }
 
-.score{
+.score{ /*who's turn and button*/
 	position: absolute;
 	bottom: 0;
 	margin-left: 25%; /*for sidebar*/
@@ -125,7 +129,7 @@ nav{ /*container for navbar*/
 	vertical-align: middle;
 
 }
-.score h3{
+.score h3{ /*whos turn*/
 	margin: 0 0 10px 0;
 	padding: 0;
 	font-size: 16px; 
@@ -133,13 +137,13 @@ nav{ /*container for navbar*/
 	
 }
 
-button {
+button { /*new game button*/
 	margin: 0 0 10px 0;
 	padding: 0;
 	
 }
 
-footer {
+footer { /*footer*/
 	position:absolute;
  	height: 20px;
 	margin-left: 25%; /*for sidebar*/
@@ -153,13 +157,13 @@ footer {
 	border-width: 2px;
 }
 
-footer p{
+footer p{ /*footer text*/
 	float: right;
 	font-size: 10px;
 	margin: 0 5px 0 0;
 }
 
-.x404 {
+.x404 { /*404 page text*/
 	position: relative;
 	top: 80px; /*for header*/
 	margin-left: 25%; /*for sidebar*/

@@ -1,3 +1,4 @@
+//Initialize variables
 var player = 'X';
 var otherPlayer = 'O';
 var one = ' ';
@@ -11,11 +12,15 @@ var eight = ' ';
 var nine = ' ';
 var xWin = null;
 var oWin = null;
+var number = 0;
 
+//Display who's turn it is.
 function changeTurn(player){
     var str = "It is "+player+"'s Turn";
     document.getElementById("player").innerHTML = str;
 }
+
+//Logic for clicking a space on the board
 function clickSpace(event){
 
         var clickedElem = event.target;
@@ -98,8 +103,8 @@ function clickSpace(event){
 		}
 }
 
-
-checkWin = function () { // CHECKS IF X WON
+//Checks win condition
+checkWin = function () {
     if ((one == four && one == seven && (one == "X")) || //first column
     (two == five && two == eight && (two == "X")) || //second column
     (three == six && three == nine && (three == "X")) || //third column
@@ -113,7 +118,7 @@ checkWin = function () { // CHECKS IF X WON
         oWin = false;
         winAlert();
 
-    } else { // CHECKS IF O WON
+    } else { 
         if ((one == four && one == seven && (one == "O")) || //first column
         (two == five && two == eight && (two == "O")) || //second column
         (three == six && three == nine && (three == "O")) || //third column
@@ -136,6 +141,7 @@ checkWin = function () { // CHECKS IF X WON
     }
 };
 
+//Reset board after a win/tie
 function newGame(event){
     player = 'X';
     otherPlayer = 'O';
@@ -162,6 +168,7 @@ function newGame(event){
 	xWin = null;
 }
 
+//Alert of who won the game
 function winAlert(){
     if(xWin){
         alert("X Wins!!!!!!!");
@@ -171,13 +178,17 @@ function winAlert(){
         createNewResult('o');
     }
 }
-function changeHTML(id,value){
 
+//Changes HTML based on inputs
+function changeHTML(id,value){
     document.getElementById(id).innerHTML = value;
 }
 
+//Create game result in the sidebar
 function createNewResult(result){
 	var mark;
+	number = number+1;
+
 
 	if(result=='x'){
 		mark="X Won!";
@@ -187,19 +198,37 @@ function createNewResult(result){
 		mark="You Tied.";
 	}
 
+	//Get date
+	var date = new Date();
+	var now = (date.getMonth()+1)+'/'+date.getDate()+'/'+date.getFullYear()+' at '+date.getHours()+':'+date.getMinutes();
+	
+	//Appends who won to the HTML
 	var winner = document.getElementById('winner-list');
 	var node=document.createElement('li');
+	node.setAttribute('id', 'winner-data'+(number));
+	node.setAttribute('class', 'data');
 	var textnode=document.createTextNode(mark);
 	node.appendChild(textnode);
 	winner.appendChild(node);
+	
+	//Appends date to the HTML
+	var winnerData = document.getElementById('winner-data'+(number));
+	var dateElem=document.createElement('p');
+	dateElem.setAttribute('id', 'winner-date'+(number));
+	dateElem.setAttribute('class', 'date');
+	var textnodeDate=document.createTextNode(now);
+	dateElem.appendChild(textnodeDate);
+	winnerData.appendChild(dateElem);
 
 }
+
+//Event listner for board spaces
 var box = document.getElementsByClassName('box');
 	for (var i = 0; i < box.length; i++) {
 		box[i].addEventListener('click', clickSpace)
 	}
 
-
+//Event listner for "Start new game" button
 var daButton = document.getElementsByClassName('new-game');
 	for (var i =0; i < daButton.length; i++) {
 		daButton[i].addEventListener('click', newGame)
